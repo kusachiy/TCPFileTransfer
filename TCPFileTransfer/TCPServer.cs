@@ -30,9 +30,9 @@ namespace TCPFileTransfer
         {
             try
             {
-                IPHostEntry ipHost = Dns.GetHostEntry("localhost");
-                IPAddress ipAddr = ipHost.AddressList[0];
-                //IPAddress ipAddr = host;
+                //IPHostEntry ipHost = Dns.GetHostEntry("localhost");
+                //IPAddress ipAddr = ipHost.AddressList[0];
+                IPAddress ipAddr = host;
                 IPEndPoint ipEndPoint = new IPEndPoint(ipAddr, port);
                 // Создаем сокет Tcp/Ip
                 sListener = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
